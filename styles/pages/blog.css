@@ -1,0 +1,94 @@
+.blog-section {
+    background-color: #f1f6ff;
+    padding-bottom: 50px;
+}
+.blog-section .container h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 46px;
+}
+.blog-section .blog{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+.blog-section .blog .blog-info{
+    width: 31.3%;
+    background: white;
+    color: #696969;;
+   box-sizing: border-box;
+}
+.blog-section  .blog-content{
+    border-bottom: 1px solid #ecf0f3;
+    padding: 20px 15px 30px 15px;
+  
+}
+.blog-section .blog .blog-info .img-container img{
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.blog-section .blog .blog-info ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.blog-section .blog .blog-info ul li{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 15px 0px 20px;
+    box-sizing: border-box;
+}
+.blog-section .blog .blog-info ul li i{
+    width: 10%;
+    margin-right: 5px;
+}
+.blog-section .blog .blog-info ul li p{
+    width: 80%;
+}
+.blog-section .blog-content .text-blog{
+    line-height: 25px;
+}
+.blog-section .blog-content h4{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+}
+.blog-section .button{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.blog-section .button-read{
+    padding: 10px 20px;
+    display: inline;
+    background: #ff3372;
+    border: solid 2px #ff3372;
+    font-weight: bold;
+    color: #ffffff ;
+    font-size: 12px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.blog-section .button-read span{
+    margin-right: 5px;
+}
+.blog-section .button-read:hover{
+    background: #ffffff;
+    border: 2px solid #ff3372;
+    color: #ff3372;
+}
+.blog-section .blog .blog-info .img-container{
+    overflow: hidden;
+    width: 100%;
+}
+.blog-section .blog .blog-info .img-container img:hover{
+    transform: scale(1.1);
+}

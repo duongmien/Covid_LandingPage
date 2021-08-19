@@ -1,0 +1,205 @@
+.covid-tracker-section {
+  background-color: #F9FCFF;
+  /* background-image: linear-gradient( #c3e4fd, #ffffff); */
+  position: relative;
+  height: 700px;
+}
+.covid-tracker-section .container {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgb(135 135 135 / 50%);
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 45%;
+  left: 50%;
+}
+.covid-tracker-section .case-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ecf0f3;
+  padding: 8px 30px;
+  width: 1200px;
+  box-sizing: border-box;
+}
+.covid-tracker-section .case-info h3{
+  font-family: "RobotoBold";
+  font-weight: bold;
+  font-size: 20px;
+}
+.covid-tracker-section .case-info .info-container{
+  display: flex;
+}
+.covid-tracker-section .case-info .info-container .info{ 
+  display: flex;
+  padding: 10px 45px;
+}
+.covid-tracker-section .case-info .info-container .info img{ 
+  animation: spin 10s linear infinite;
+  margin-right: 20px;
+}
+.covid-tracker-section .case-info .info-container .info .detail{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.covid-tracker-section .case-info .info-container .info .detail p:first-child{ 
+  font-family: "RobotoBold";
+  font-weight: bold;
+  font-size: 30px;
+}
+.covid-tracker-section .case-info .info-container .info .detail p:last-child{ 
+  font-weight: 400;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.covid-tracker-section .chart-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 35px;
+  font-family: "RobotoBold";
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ff3372;
+}
+
+.covid-tracker-section .chart-container {
+  padding: 30px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.covid-tracker-section .chart-filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+  position: relative;
+  margin-bottom: 18px;
+}
+.covid-tracker-section .chart-filter h5{
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.covid-tracker-section .chart-filter .filter .select{
+  padding: 12px 10px;
+  border-radius: 8px;
+  width: 200px;
+  /* height: 25px; */
+  border: 1px solid #ff74a0;
+  cursor: pointer;
+  position: relative;
+  height: 12px;
+}
+.covid-tracker-section .chart-filter .filter .select >span{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 45%;
+  width: 175px;
+  white-space: nowrap; 
+  overflow: hidden;
+  
+}
+.covid-tracker-section .chart-filter .filter .select .icon-arrow{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  color: #ff3372;
+  right: 0;
+  top: 50%;
+  /* width: 200px; */
+  /* white-space: nowrap; 
+  overflow: hidden; */
+}
+.covid-tracker-section .chart-filter .filter .list-option{
+  display: none;
+  border-radius: 8px;
+  border: 1px solid #ff74a0;
+  padding: 10px 0;
+  position: absolute;
+  width: 220px;
+  background-color: #ffffff;
+  font-weight: normal;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* margin-top: 2px; */
+}
+.covid-tracker-section .chart-filter .filter .list-option::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+.covid-tracker-section .chart-filter .filter .list-option::-webkit-scrollbar-thumb {
+  background: #ff3372;
+  border-radius: 20px;
+}
+
+.covid-tracker-section .chart-filter .filter .list-option::-webkit-scrollbar-track {
+  background: #ffcddd;
+  border-radius: 20px;
+}
+.covid-tracker-section .chart-filter .filter .list-option label{
+  cursor: pointer;
+  display: block;
+  padding: 12px 10px;
+  transition: all 0.3s;
+}
+.covid-tracker-section .chart-filter .filter .list-option label.active{
+  color: #ff3372;
+  font-weight: bold;
+}
+.covid-tracker-section .chart-filter .filter .list-option label:hover{
+  background-color: #ff74a0;
+  color: white;
+}
+.covid-tracker-section .chart-filter .filter .list-checkbox{
+  display: none;
+  border-radius: 8px;
+  border: 1px solid #ff74a0;
+  padding: 10px 0 0 0;
+  position: absolute;
+  width: 220px;
+  background-color: #ffffff;
+  /* margin-top: 2px; */
+}
+.covid-tracker-section .chart-filter .filter .list-checkbox .check-box-action{
+  padding: 10px 0;
+  margin: 5px 10px 0 10px;
+  border-top: 1px solid #ddd;
+}
+.covid-tracker-section .chart-filter .filter .list-checkbox .check-box-action button{
+  padding: 7px 20px;
+  border-radius: 8px;
+  outline: none;
+  margin-left: auto;
+  display: block;
+  cursor: pointer;
+  border: none;
+  background-color: #ff3372;
+  border: 2px solid #ff3372;
+  font-size: 14px;
+  transition: all 0.3s;
+  color: #ffffff;
+}
+.covid-tracker-section .chart-filter .filter .list-checkbox .check-box-action button:hover{
+  background-color: #ffffff;
+  border: 2px solid #ff3372;
+  color: #ff3372;
+}
+.covid-tracker-section .chart-filter .filter .list-checkbox label{
+  cursor: pointer;
+  display: block;
+  padding: 12px 10px;
+  transition: all 0.3s;
+}
+.covid-tracker-section .chart-filter .filter .list-checkbox label:hover{
+  background-color: #ff74a0;
+  color: white;
+}
+.covid-tracker-section .chart-filter .filter .list-checkbox label i.far{
+  margin-right: 5px;
+}
+.covid-tracker-section .chart-filter .filter .list-checkbox label .fa-check-square{
+  display: none;
+}

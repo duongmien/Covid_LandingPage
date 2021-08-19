@@ -1,0 +1,32 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "RobotoRegular";
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.text-color-pink {
+  color: #ff3372;
+}
+.text-color-gray {
+  color: #696969;
+}
+.bg-color-pink {
+  background-color: #ff3372;
+}
+.text-purple {
+  color: #A533D7;
+}
+.text-orange {
+  color: #FFB54B;
+}
+.text-red {
+  color: #E13588;
+}
+

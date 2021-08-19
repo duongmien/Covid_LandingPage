@@ -1,0 +1,57 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+.doctor-section .container h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 46px;
+}
+.doctor-section .owl-carousel{
+    font-family: "BarlowRegular";  
+}
+.doctor-section .owl-carousel .doctor .contact-doctor{
+    position: absolute;
+    line-height: 20px;
+    transition: .4s all;
+    padding: 25px 20px 20px 20px;
+    box-sizing: border-box;
+    transform: translate(-50%,-50%);
+    left: 50%;  
+}
+.doctor-section .owl-carousel .doctor .contact-doctor li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #0d6bff;
+}
+.doctor-section .owl-carousel .doctor .contact-doctor li p{  
+    opacity: 0;
+}
+.doctor-section .owl-carousel .doctor .contact-doctor li i{
+    opacity: 0;
+    margin-right: 5px;
+}
+.doctor-section .owl-carousel .doctor .contact-doctor .name{
+    padding-top: 20px;
+    line-height: 26px;
+    font-size: 16px;
+    color: #262f3e;
+}
+.doctor-section .owl-carousel .doctor:hover .contact-doctor {
+    background-color: #faefef;
+    box-shadow: 0px 0px 31px 0px rgb(0 0 0 / 50%);
+}
+
+.doctor-section .owl-carousel .doctor:hover .contact-doctor p{
+    opacity: 1;   
+}
+.doctor-section .owl-carousel .doctor:hover .contact-doctor i{
+    opacity: 1;
+}
+   
+

@@ -1,0 +1,10 @@
+footer {
+  background-color:#F1F6FF;
+  /* height: 100px; */
+  padding: 140px 0 20px 0;
+  position: relative;
+}
+footer h4 {
+  color: #000;
+  text-align: center;
+}

@@ -1,0 +1,83 @@
+.prevention-section{
+    background-image: url(../../assets/images/bg-prevention.png);
+}
+.prevention-section h2{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 46px;
+}
+.prevention-section .container{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.prevention-section .container .anim-icon-4{
+    position: absolute;
+    left: -250px;
+    top:10%;
+    width: 200px;
+    animation: spin 10s linear infinite;
+}
+.prevention-section .container .content-left{
+    width: 35%;
+    
+}
+.prevention-section .container .content-left img{
+    width: 90%;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.prevention-section .container .content-right{
+    width: 65%;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+ .case{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;  
+}
+.case .icon-box{
+    width: 31%;
+    margin-bottom: 30px;
+    transition: all 0.6s ease-in-out;
+    background-color: #ffffff;
+    padding: 25px 10px;
+    box-shadow: 0px 0px 31px 0px rgb(0 0 0 / 6%);
+    overflow: hidden;
+    z-index: 0;
+    box-sizing: border-box;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-image: linear-gradient(#ffffff, #eee3f1);
+}
+ .case .icon-box .icon{
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+  
+}
+ .case .icon-box .icon-text{
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #ff3372;
+}
+.prevention-section .case .icon-box .desc{
+    line-height: 18px;
+    font-size: 14px;
+}
+
+.prevention-section .case .icon-box:hover{
+    background-image: linear-gradient(#ffffff, #c88bd9);
+    /* color: #ffffff; */
+    transform: scale(1.02); 
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0px;
+}
+

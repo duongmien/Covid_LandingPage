@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website about Vietnam Covid 19 status tracker." />
+    <meta property="og:title" content="Cuidar" />
+    <meta property="og:image" content="./assets/images/logo1.png" />
+    <meta property="og:description " content="A website about Vietnam Covid 19 status tracker." />
+
+    <title>Cuidar</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/cuidar.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="./styles/components/reset.css">
+    <link rel="stylesheet" href="./styles/components/font.css">
+    <link rel="stylesheet" href="./owlcarousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="./owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./styles/components/common.css">
+    <link rel="stylesheet" href="./styles/components/header.css">
+    <link rel="stylesheet" href="./styles/pages/home.css">
+    <link rel="stylesheet" href="./styles/pages/slide.css">
+    <link rel="stylesheet" href="./styles/pages/covidTrackerSection.css">
+    <link rel="stylesheet" href="./styles/pages/prevention.css">
+    <link rel="stylesheet" href="./styles/pages/washhand.css">
+    <link rel="stylesheet" href="./styles/pages/doctor.css">
+    <link rel="stylesheet" href="./styles/pages/blog.css">
+    <link rel="stylesheet" href="./styles/pages/contact.css">
+    <link rel="stylesheet" href="./styles/components/footer.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="home">
+        <div class="header-content">
+            <div class="logo">
+                <img src="./assets/images/logo1.png" alt="Cuidar">
+            </div>
+            <div class="header-content-right">
+                <ul class="list menu">
+                    <li>
+                        <a id="nav-option-home" onclick="moveHome()" class="nav-option active">Home</a>
+                    </li>
+                    <li>
+                        <a id="nav-option-tracker" onclick="moveCovidTracker()" class="nav-option">Covid Tracker</a>
+                    </li>
+                    <li>
+                        <a id="nav-option-about" onclick="moveAbout()" class="nav-option">About</a>
+                    </li>
+                    <li>
+                        <a id="nav-option-symptoms" onclick="moveSymptoms()" class="nav-option">Symptoms</a>
+                    </li>
+                    <li>
+                        <a id="nav-option-prevention" onclick="movePrevention()" class="nav-option">Prevention</a>
+                    </li>
+                    <li>
+                        <a id="nav-option-doctors" onclick="moveDoctors()" class="nav-option">Doctors</a>
+                    </li>
+                    <li>
+                        <a id="nav-option-blog" onclick="moveBlog()" class="nav-option">Blog</a>
+                    </li>
+                    <li>
+                        <a id="nav-option-contact" onclick="moveContact()" class="nav-option">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bt-online-help">
+                <i class="fas fa-headphones"></i>
+                <span>Online Help</span>
+            </div>
+        </div>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Section Banner -->
+        <section class="banner-section">
+            <img class="anim-icon-1" src="./assets/images/anim-icon-1.png" alt="corona">
+            <img class="anim-icon-2" src="./assets/images/anim-icon-2.png" alt="corona">
+            <img class="anim-icon-3" src="./assets/images/anim-icon-3.png" alt="corona">
+            <h1>Keep yourself at your home quarantine</h1>
+            <h1 style="color: #ff3372;;">Stay Home - Stay Safe.</h1>
+            <div class="container">
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        <!-- Slide img -->
+                        <div class="slide frist">
+                            <img src="./assets/images/slide-1.png" alt="prevent corona">
+                        </div>
+                        <div class="slide">
+                            <img src="./assets/images/slide-2.jpg" alt="prevent corona">
+                        </div>
+                        <div class="slide">
+                            <img src="./assets/images/slide-3.png" alt="prevent corona">
+                        </div>
+                        <div class="slide">
+                            <img src="./assets/images/slide-4.png" alt="prevent corona">
+                        </div>
+                        <!-- automatic navigation start -->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Covid Tracker -->
+        <section class="covid-tracker-section">
+            <div class="container">
+                <div class="case-info" id="covid-tracker">
+                    <h3>Total Corona Statistics :</h3>
+                    <div class="info-container">
+                        <div class="info">
+                            <img src="./assets/images/activeCase.png" alt="corona">
+                            <div class="detail">
+                                <p class="count-animation text-purple">200715</p>
+                                <p>Active Cases</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <img src="./assets/images/recoveredCases.png" alt="corona">
+                            <div class="detail">
+                                <p class="count-animation text-orange">66637</p>
+                                <p>Recovered Cases</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <img src="./assets/images/Deaths.png" alt="corona">
+                            <div class="detail">
+                                <p class="count-animation text-red">3016</p>
+                                <p>Deaths</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="chart-title">DAILY VIETNAM COVID-19 TRACKER</h2>
+                <div class="chart-filter">
+                    <div class="filter">
+                        <h5>City</h5>
+                        <div class="select select-city">
+                            <span>All</span><i class="icon-arrow fas fa-chevron-down"></i>
+                        </div>
+                        <div class="list-option">
+                            <label class="option active" value="all">All</label>
+                            <label class="option" value="1">An Giang</label>
+                            <label class="option" value="2">Ba Ria – Vung Tau</label>
+                            <label class="option" value="3">Bac Lieu</label>
+                            <label class="option" value="4">Bac Giang</label>
+                            <label class="option" value="5">Bac Kan</label>
+                            <label class="option" value="6">Bac Ninh</label>
+                            <label class="option" value="7">Ben Tre</label>
+                            <label class="option" value="8">Binh Duong</label>
+                            <label class="option" value="9">Binh Dinh</label>
+                            <label class="option" value="10">Binh Phuoc</label>
+                            <label class="option" value="11">Binh Thuan</label>
+                            <label class="option" value="12">Ca Mau</label>
+                            <label class="option" value="13">Cao Bang</label>
+                            <label class="option" value="14">Can Tho</label>
+                            <label class="option" value="15">Da Nang</label>
+                            <label class="option" value="16">Dak Lak</label>
+                            <label class="option" value="17">Dak Nong</label>
+                            <label class="option" value="18">Dien Bien</label>
+                            <label class="option" value="19">Dong Nai</label>
+                            <label class="option" value="20">Dong THap</label>
+                            <label class="option" value="21">Gia Lai</label>
+                            <label class="option" value="22">Ha Giang</label>
+                            <label class="option" value="23">Ha Nam</label>
+                            <label class="option" value="24">Ha Noi</label>
+                            <label class="option" value="25">Ha Tinh</label>
+                            <label class="option" value="26">Hai Duong</label>
+                            <label class="option" value="27">Hai Phong</label>
+                            <label class="option" value="28">Hau Giang</label>
+                            <label class="option" value="29">Hoa Binh</label>
+                            <label class="option" value="30">Ho Chi Minh city</label>
+                            <label class="option" value="31">Hung Yen</label>
+                            <label class="option" value="32">Khanh Hoa</label>
+                            <label class="option" value="33">Kien Giang</label>
+                            <label class="option" value="34">Kon Tum</label>
+                            <label class="option" value="35">Lai Chau</label>
+                            <label class="option" value="36">Lang Son</label>
+                            <label class="option" value="37">Lao Cai</label>
+                            <label class="option" value="38">Lam Dong</label>
+                            <label class="option" value="39">Long An</label>
+                            <label class="option" value="40">Nam Dinh</label>
+                            <label class="option" value="41">Nghe An</label>
+                            <label class="option" value="42">Ninh Binh</label>
+                            <label class="option" value="43">Ninh Thuan</label>
+                            <label class="option" value="44">Phu Tho</label>
+                            <label class="option" value="45">Phu Yen</label>
+                            <label class="option" value="46">Quang Binh</label>
+                        </div>
+                    </div>
+                    <div class="filter">
+                        <h5>Case type</h5>
+                        <div class="select select-checkbox">
+                            <span>All</span><i class="icon-arrow fas fa-chevron-down"></i>
+                        </div>
+                        <div class="list-checkbox">
+                            <label class="checkbox text-purple" value="newCases" checked="checked"><i class="far fa-square"></i><i
+                    class="far fa-check-square"></i>New</label>
+                            <label class="checkbox text-orange" value="recoveredCases" checked="checked"><i class="far fa-square"></i><i
+                    class="far fa-check-square"></i>Recover</label>
+                            <label class="checkbox text-red" value="deaths" checked="checked"><i class="far fa-square"></i><i
+                    class="far fa-check-square"></i>Death</label>
+                            <div class="check-box-action">
+                                <button id="apply-check-box-btn">Apply</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </section>
+        <!-- Section About Covid -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="container-left">
+                    <img class="anim-icon-1" src="./assets/images/anim-icon-1.png" alt="corona">
+                    <img class="anim-icon-3" src="./assets/images/anim-icon-3.png" alt="corona">
+                    <img src="./assets/images/about-covid.png" alt="corona">
+                </div>
+                <div class="container-right">
+                    <img class="anim-icon-2" src="./assets/images/anim-icon-2.png" alt="corona">
+                    <h2 class="text-color-pink">About Corona Virus Disease (COVID-19)</h2>
+                    <p>COVID-19 is a new illness that can affect your lungs and airways. It's caused by a virus called coronavirus.
+                    </p>
+                    <p>At the end of December 2019, Chinese public health authorities reported several cases of acute respiratory syndrome in Wuhan City, Hubei province, China. Chinese scientists soon identified a novel coronavirus as the main causative
+                        agent and It is a new strain of virus.</p>
+                    <ul>
+                        <li>
+                            <i class="fas fa-check-circle" style="color: #00d0ff"></i>
+                            <p class="text-color-pink ">Wash Your Hands For 20 sec</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle" style="color: #00d0ff"></i>
+                            <p class="text-color-pink ">Cover Nose and Mouth When Sneezing</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle" style="color: #00d0ff"></i>
+                            <p class="text-color-pink ">Wear A Mask If Available</p>
+                        </li>
+                    </ul>
+                    <div class="button-read">
+                        <p>read more</p>
+                        <i class="fas fa-angle-double-right"></i>
+                    </div>
+                    <a href="https://youtu.be/i0ZabxXmH4Y" target="_blank" title="Open video about Corona on youtube">
+                        <i class="fas fa-play" style="color: #ffffff; font-size: 25px;"></i>
+                        <span class="plus-1"></span>
+                        <span class="plus-2"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Section Symptoms Covid -->
+        <section class="symptom-section" id="symptoms">
+            <div class="container">
+                <div class="bubbles">
+                    <img src="./assets/images/anim-icon-5.png" alt="corona">
+                    <img src="./assets/images/anim-icon-5.png" alt="corona">
+                    <img src="./assets/images/anim-icon-5.png" alt="corona">
+                    <img src="./assets/images/anim-icon-5.png" alt="corona">
+                    <img src="./assets/images/anim-icon-5.png" alt="corona">
+                    <img src="./assets/images/anim-icon-5.png" alt="corona">
+                    <img src="./assets/images/anim-icon-5.png" alt="corona">
+                    <img src="./assets/images/anim-icon-5.png" alt="corona">
+                    <img src="./assets/images/anim-icon-5.png" alt="corona">
+                </div>
+                <h2 class="text-color-pink">Symptoms of Coronavirus</h2>
+                <p class="text-title">Reported illnesses have ranged from mild symptoms to severe illness and death for confirmed coronavirus disease 2019 (COVID-19) cases. These symptoms may appear 2-14 days after exposure (based on the incubation period of MERS-CoV viruses).
+                    If you develop emergency warning signs for COVID-19 get medical attention immediately.</p>
+                <div class="symptoms">
+                    <div class="symptoms-left">
+                        <div class="single-symptom">
+                            <div class="single-icon">
+                                <img src="./assets/images/drycough.svg" alt="drycough">
+                            </div>
+                            <h2>Dry Cough</h2>
+                            <p class="desc">Over time, a cough can develop into a cycle, where excessive coughing causes irritation and inflammation, which worsens the cough.</p>
+                        </div>
+                        <div class="single-symptom">
+                            <div class="single-icon">
+                                <img src="./assets/images/headache.svg" alt="headache">
+                            </div>
+                            <h2>Strong Headache</h2>
+                            <p class="desc">In some patients, the severe headache of COVID-19 only lasts a few days, while in others, it can last up to months.</p>
+                        </div>
+                        <div class="single-symptom">
+                            <div class="single-icon">
+                                <img src="./assets/images/vomiting.svg" alt="vomiting">
+                            </div>
+                            <h2>Vomiting</h2>
+                            <p class="desc">Nausea and vomiting are not diseases, but they are symptoms of many conditions such as: Covid-19...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="symptoms-middle">
+                        <img src="./assets/images/corona-symtom.svg" alt="symtom">
+                    </div>
+                    <div class="symptoms-right">
+                        <div class="single-symptom">
+                            <div class="single-icon">
+                                <img src="./assets/images/hot-fever.svg" alt="fever">
+                            </div>
+                            <h2>Hot Fever</h2>
+                            <p class="desc">Fever is one of the most common symptoms of COVID-19. However, people with COVID-19 sometimes have a low-grade fever or no fever.</p>
+                        </div>
+                        <div class="single-symptom">
+                            <div class="single-icon">
+                                <img src="./assets/images/sore-throat.svg" alt="sore throat">
+                            </div>
+                            <h2>Sore Throat</h2>
+                            <p class="desc">But a sore throat is only one of the symptoms that may develop due to COVID-19. Some other symptoms are much more common.</p>
+                        </div>
+                        <div class="single-symptom">
+                            <div class="single-icon">
+                                <img src="./assets/images/shortnessbreath.svg" alt="shortnessbreath">
+                            </div>
+                            <h2>Shortness of Breath</h2>
+                            <p class="desc">Shortness of breath, or dyspnea, is an uncomfortable condition that makes it difficult to fully get air into your lungs.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Prevention-section -->
+        <section class="prevention-section" id="prevention">
+            <h2 class="text-color-pink">The best way to prevent illness is to avoid <br> being exposed to this virus.</h2>
+            <p class="text-title">There are millions of people who got affected around the world with CORONAVIRUS or officially COVID-19. In this tragic situation, let’s support each other <br> and spread love to families who have lost their loved ones.</p>
+            <div class="container">
+                <img class="anim-icon-4" src="./assets/images/anim-icon-4.png" alt="corona">
+                <div class="content-left">
+                    <img src="./assets/images/prevention-doctor.svg" alt="doctor">
+                </div>
+                <div class="content-right">
+                    <div class="case">
+                        <div class="icon-box">
+                            <img class="icon" src="./assets/images/pre-1.png" alt="prevent corona">
+                            <p class="icon-text">Avoid Close contact</p>
+                            <p class="desc">Maintain at least 1 metre (6 feet) distance between yourself & anyone who is coughing or sneezing. If you are too close, get chance to infected.</p>
+                        </div>
+                        <div class="icon-box">
+                            <img class="icon" src="./assets/images/pre-2.png" alt="prevent corona">
+                            <p class="icon-text">Clean your hands Often</p>
+                            <p class="desc">Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water for at least 20 seconds</p>
+                        </div>
+                        <div class="icon-box">
+                            <img class="icon" src="./assets/images/pre-3.png" alt="prevent corona">
+                            <p class="icon-text">Cover coughs and sneezes</p>
+                            <p class="desc">Maintain good respiratory hygiene as covering your mouth & nose with your bent elbow or tissue when cough or sneeze.</p>
+                        </div>
+                        <div class="icon-box">
+                            <img class="icon" src="./assets/images/pre-4.png" alt="prevent corona">
+                            <p class="icon-text">Stay at home</p>
+                            <p class="desc">Avoid close contact with people who are sick and stay home if you are sick to avoid spreading illness to others.</p>
+                        </div>
+                        <div class="icon-box">
+                            <img class="icon" src="./assets/images/pre-5.png" alt="prevent corona">
+                            <p class="icon-text">Wear a facemask</p>
+                            <p class="desc">Hands touch many surfaces and can pick up viruses. So, hands can transfer the virus to your eyes, nose or mouth son that wear facemask.</p>
+                        </div>
+                        <div class="icon-box">
+                            <img class="icon" src="./assets/images/pre-6.png" alt="prevent corona">
+                            <p class="icon-text">Clean and disinfect</p>
+                            <p class="desc">Clean and disinfect frequently touched objects and surfaces, such as toys, electronic devices and doorknobs and Immediately dispose of any tissues.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section washhand-section -->
+        <section class="washhand-section">
+            <div class="container">
+                <h2 class="text-color-pink">Set of Rules How to Wash your Hands</h2>
+                <p class="text-title">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people infected with the COVID-19 virus will experience</p>
+                <div class="content">
+                    <div class="conten-left">
+                        <div class="case">
+                            <div class="icon-box">
+                                <img class="icon" src="./assets/images/wash-a.png" alt="wash hand">
+                                <p class="icon-text">Water and Soap</p>
+                            </div>
+                            <div class="icon-box">
+                                <img class="icon" src="./assets/images/wash-b.png" alt="wash hand">
+                                <p class="icon-text">Palm to Palm</p>
+                            </div>
+                            <div class="icon-box">
+                                <img class="icon" src="./assets/images/wash-c.png" alt="wash hand">
+                                <p class="icon-text">Between Fingurs</p>
+                            </div>
+                            <div class="icon-box">
+                                <img class="icon" src="./assets/images/wash-d.png" alt="wash hand">
+                                <p class="icon-text">Focus on Thumbs</p>
+                            </div>
+                            <div class="icon-box">
+                                <img class="icon" src="./assets/images/wash-e.png" alt="wash hand">
+                                <p class="icon-text">Back of Hands</p>
+                            </div>
+                            <div class="icon-box">
+                                <img class="icon" src="./assets/images/wash-f.png" alt="wash hand">
+                                <p class="icon-text">Focus on Wrists</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-right">
+                        <img src="./assets/images/wash-lead.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Doctors -->
+        <section class="doctor-section" id="doctors">
+            <div class="container">
+                <img class="anim-icon-2" src="./assets/images/anim-icon-2.png" alt="corona">
+                <img class="anim-icon-3" src="./assets/images/anim-icon-3.png" alt="corona">
+                <h2 class="text-color-pink">Looking for Doctor or Volunteer? <br> We are waithing for your call</h2>
+                <p class="text-title">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people infected with the COVID-19 virus will experience</p>
+                <div class="content-doctor">
+                    <div class="owl-carousel">
+                        <div class="doctor">
+                            <img src="./assets/images/doctor1.jpg" alt="doctor">
+                            <div class="contact-doctor">
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-phone"></i>
+                                        <p>0705175740</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope-open-text"></i>
+                                        <p>duongthimien7@gmail.com</p>
+                                    </li>
+                                </ul>
+                                <p class="name">
+                                    <span style="font-weight: bold;">Marcos Assensio</span> <br> Senior Expert
+                                </p>
+                            </div>
+                        </div>
+                        <div class="doctor">
+                            <img src="./assets/images/doctor2.jpg" alt="doctor">
+                            <div class="contact-doctor">
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-phone"></i>
+                                        <p>0705175740</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope-open-text"></i>
+                                        <p>duongthimien7@gmail.com</p>
+                                    </li>
+                                </ul>
+                                <p class="name">
+                                    <span style="font-weight: bold;">Jennifer Gordon</span> <br> Medicine Specialist
+                                </p>
+                            </div>
+                        </div>
+                        <div class="doctor">
+                            <img src="./assets/images/doctor3.jpg" alt="doctor">
+                            <div class="contact-doctor">
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-phone"></i>
+                                        <p>0705175740</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope-open-text"></i>
+                                        <p>duongthimien7@gmail.com</p>
+                                    </li>
+                                </ul>
+                                <p class="name">
+                                    <span style="font-weight: bold;">Christian Moreno</span> <br> Senior Expert
+                                </p>
+                            </div>
+                        </div>
+                        <div class="doctor">
+                            <img src="./assets/images/doctor4.jpg" alt="doctor">
+                            <div class="contact-doctor">
+                                <ul>
+                                    <li>
+                                        <i class="fas fa-phone"></i>
+                                        <p>0705175740</p>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-envelope-open-text"></i>
+                                        <p>duongthimien7@gmail.com</p>
+                                    </li>
+                                </ul>
+                                <p class="name">
+                                    <span style="font-weight: bold;">Carol Oliver</span>
+                                    <br> Throat Specialist
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- Section Blogs -->
+        <section class="blog-section" id="blog">
+            <div class="container">
+                <h2 class="text-color-pink">Recent Blog Post</h2>
+                <p class="text-title">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people infected with the COVID-19 virus will experience</p>
+                <div class="blog">
+                    <div class="blog-info">
+                        <div class="img-container">
+                            <img src="./assets/images/blog-1.jpg" alt="corona">
+                        </div>
+                        <div class="blog-content">
+                            <h4>
+                                <a href="">How to safe yourself from Coronavirus?</a>
+                            </h4>
+                            <ul>
+                                <li>
+                                    <i class="far fa-calendar-alt"></i>
+                                    <p>25/07/2021</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-user-edit"></i>
+                                    <p>Mien Duong</p>
+                                </li>
+                            </ul>
+                            <p class="text-blog">Coronaviruses are a large family of viruses which may cause illness in animals or humans. In humans, several COVID -19 are known to cause respiratory.</p>
+                        </div>
+                        <div class="button">
+                            <div class="button-read">
+                                <span>read more</span>
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="blog-info">
+                        <div class="img-container">
+                            <img src="./assets/images/blog-2.jpg" alt="corona">
+                        </div>
+                        <div class="blog-content">
+                            <h4>
+                                <a href="">What Can I do to protect myself & prevent the spread of disease?</a>
+                            </h4>
+                            <ul>
+                                <li>
+                                    <i class="far fa-calendar-alt"></i>
+                                    <p>21/05/2021</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-user-edit"></i>
+                                    <p>Mien Duong</p>
+                                </li>
+                            </ul>
+                            <p class="text-blog">Coronaviruses are a large family of viruses which may cause illness in animals or humans. In humans, several COVID -19 are known to cause respiratory.</p>
+                        </div>
+                        <div class="button">
+                            <div class="button-read">
+                                <span>read more</span>
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-info">
+                        <div class="img-container">
+                            <img src="./assets/images/blog-3.jpg" alt="corona">
+                        </div>
+                        <div class="blog-content">
+                            <h4>
+                                <a href="">Coronavirus disease (COVID-19) Online training</a>
+                            </h4>
+                            <ul>
+                                <li>
+                                    <i class="far fa-calendar-alt"></i>
+                                    <p>25/07/2021</p>
+                                </li>
+                                <li>
+                                    <i class="fas fa-user-edit"></i>
+                                    <p>Mien Duong</p>
+                                </li>
+                            </ul>
+                            <p class="text-blog">Coronaviruses are a large family of viruses which may cause illness in animals or humans. In humans, several COVID -19 are known to cause respiratory.</p>
+                        </div>
+                        <div class="button">
+                            <div class="button-read">
+                                <span>read more</span>
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Contact-Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="effect-wrap">
+                    <div class="effect effect-1">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="effect effect-1">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <h2 class="text-color-pink">Contact with us</h2>
+                <p class="text-title">If you have any questions regarding Covid-19, do not hesitate to contact us. We are always happy to answer you!</p>
+                <div class="info-form-wrapper">
+                    <div class="person-info">
+                        <div class="info-content">
+                            <i class="fas fa-user-alt"></i>
+                            <div class="info-items">
+                                <p class="info-title">Full Name</p>
+                                <p class="info">Duong Thi Mien</p>
+                            </div>
+                        </div>
+                        <div class="info-content">
+                            <i class="far fa-address-card"></i>
+                            <div class="info-items">
+                                <p class="info-title">Student ID</p>
+                                <p class="info">1911505310234</p>
+                            </div>
+                        </div>
+                        <div class="info-content">
+                            <i class="far fa-building"></i>
+                            <div class="info-items">
+                                <p class="info-title">Class</p>
+                                <p class="info">19T2</p>
+                            </div>
+                        </div>
+                        <div class="info-content">
+                            <i class="fas fa-phone-volume"></i>
+                            <div class="info-items">
+                                <p class="info-title">Phone Number</p>
+                                <p class="info">0705175740</p>
+                            </div>
+                        </div>
+                        <div class="info-content">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <div class="info-items">
+                                <p class="info-title">Mail</p>
+                                <p class="info">duongthimien7@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-with">
+                        <form class="contact-form" action="" method="get">
+                            <input type="text" name="name" placeholder="Your Name" class="contact-input">
+                            <input type="email" name="email" placeholder="Your Email" class="contact-input">
+                            <input type="text" name="text" placeholder="Your Address" class="contact-input">
+                            <input type="text" name="text" placeholder="Your Company" class="contact-input">
+                            <textarea rows="5" class="mes" placeholder="Your Messages"></textarea>
+                            <input type="submit" name="submit" value="Send Message" class="lab-btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <h4>© 2021 All Rights Reserved. Duong Thi Mien</h4>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./owlcarousel/owl.carousel.min.js"></script>
+    <script src="./scripts/slide.js"></script>
+    <script src="./scripts/home.js"></script>
+    <script src="./scripts/chart.js"></script>
+
+</body>
+
+</html>

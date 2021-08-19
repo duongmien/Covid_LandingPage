@@ -1,0 +1,82 @@
+header{
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    padding: 20px 0px;
+    transition: top 0.3s;
+  }
+header .active{
+  color: #ff3372;
+  font-weight: bold;
+}
+  header .header-content{
+    max-width: 1200px;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+  }
+  header .logo{
+      /* width: 20%; */
+  }
+  header .header-content-right{
+      /* width: 80%; */
+      display: flex;
+      align-items: center;  
+  }
+  header ul{
+    display: flex;
+    justify-content: space-around;
+
+  }
+  header li{
+   padding-left: 20px;
+   padding-right: 20px;
+  }
+  header ul li a{
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  a:hover{
+      color: #ff3372;
+  }
+  .bt-online-help{
+    box-sizing: border-box;
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: #ff3372;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 2px solid #ff3372;
+    transition: all 0.3s;
+  }
+  .bt-online-help:hover{
+    background-color: #ffffff;
+  }
+  .bt-online-help:hover span{
+    color: #ff3372;
+  }
+  .bt-online-help:hover i{
+    color: #ff3372;
+  }
+  .bt-online-help span{
+    /* margin-top: 12px; */
+    color: #ffffff;
+  }
+  .bt-online-help i{
+    display: block;
+    margin-right: 5px;
+    color: #ffffff;
+  }
+  

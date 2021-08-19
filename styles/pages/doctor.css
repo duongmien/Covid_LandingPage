@@ -1,0 +1,92 @@
+.doctor-section .container{
+    position: relative;
+}
+.doctor-section .container .anim-icon-2{
+    position: absolute;
+    top: 5%;
+    left: -13%;
+    animation: spin 10s linear infinite;
+}
+.doctor-section .container .anim-icon-3{
+    position: absolute;
+    bottom: 3%;
+    right: -9%;
+    animation: spin 10s linear infinite;
+}
+.doctor-section .container h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 46px;
+}
+.doctor-section .content-doctor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: "BarlowRegular";
+    
+}
+.doctor-section .content-doctor .doctor{
+    /* width: 25%; */
+    position: relative;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.doctor-section .content-doctor .doctor img{
+    width: 100%;
+    padding-bottom: 120px;
+}  
+.doctor-section .content-doctor .doctor .contact-doctor{
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    line-height: 20px;
+    transition: .4s all;
+    padding: 25px 20px 20px 20px;
+    box-sizing: border-box;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    bottom: -8%;
+   
+}
+.doctor-section .content-doctor .doctor .contact-doctor li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #ff3372;
+    cursor: pointer;
+}
+.doctor-section .content-doctor .doctor .contact-doctor li p{
+    
+    opacity: 0;
+}
+.doctor-section .content-doctor .doctor .contact-doctor li i{
+    opacity: 0;
+    margin-right: 5px;
+}
+.doctor-section .content-doctor .doctor .contact-doctor .name{
+    padding-top: 20px;
+    line-height: 26px;
+    font-size: 16px;
+    color: #262f3e;
+}
+.doctor-section .content-doctor .doctor:hover .contact-doctor {
+    background-image: linear-gradient(#ffffff, #edd5f3);
+    box-shadow: 0px 0px 31px 0px rgb(0 0 0 / 20%);
+}
+
+.doctor-section .content-doctor .doctor:hover .contact-doctor p{
+    opacity: 1;
+    
+}
+.doctor-section .content-doctor .doctor:hover .contact-doctor i{
+    opacity: 1;
+}
+   
+
